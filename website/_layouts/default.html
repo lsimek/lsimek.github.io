@@ -4,53 +4,33 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<link rel="preload" as="style" href="static/style-light.css">
-	<link rel="preload" as="style" href="static/style-dark.css">
-	<link rel="preload" as="image" href="assets/icon-light.png">
-	<link rel="preload" as="image" href="assets/icon-dark.png">
-	
 	<script src="theme-script.js"></script>
 	<link id="icon" rel="icon" type="image/png" href="#">
 	<link rel="stylesheet" href="static/mvp/mvp.css">
 	<link id="theme-style" rel="stylesheet" href="#">
 	<link rel="stylesheet" href="static/style-common.css">
-	<title>Welcome</title>
+	<title>{{ page.name_title }}</title>
 </head>
 
 <body>
 <header>
 	<nav>
 		<ul>
-			<li>Home</li>
-			<li><a href="other-work.html">Work</a></li>
-			<li><a href="blog.html">Blog</a></li>
-			<li><a href="contact.html">Contact</a></li>
-			<li><a href="links.html">Links</a></li>
+			{% for page in site.pages %}
+				{% if page.url == page.url %}
+					<li>{{ page.name_navbar }}</li>
+				{% else %}
+					<li><a href="{{ page.url }}">{{ page.name_title }}</a></li>
+				{% endif %}
+			{% endfor %}
 		</ul>
 	</nav>
 </header>
 
 
 <main>
-	<div class="theme-toggle">
-		<a id="theme-toggle-link" href="#" alt="Ctrl+Shift+T">
-		Toggle Theme
-		</a>
-	</div>
-	
-	<h1>Welcome</h1>
-	<figure id="my-photo" class="rounded-image">
-		<img src="assets/photo.png">
-	</figure>
-	
-	  	<p>Hello, my name is Luka and I am a mathematician focusing on data science. I received my 				undergraduate degree in mathematics in 2022. Currently I am expanding my theoretical knowledge in the field of statistical learning and working on personal projects.</p>
-	  	
-	  <p>I love problem solving &ndash; I always aim to utilize a versatile set of mathematical and software tools to analyze a problem from multiple perspectives, gain a deep understanding and ultimately offer a quality solution.</p>
-	  
-	  <p>When it comes to programming, I usually work with Python and am proficient with the standard library, scientific libraries and web scraping. I also have experience in SQL and R, as well as in C and C++ when it comes to implementing efficient algorithms.</p>
-	  
-	  <p>I invite you to visit me on <a href="https://github.com/tinjano/">GitHub</a>, see some of my other work <a href="other-work.html">here</a> or <a href="contact.html">contact</a> me.
-	</p>
+	{% include toggle.html %}
+	{{ content }}
 </main>
 </body>
 </html>
