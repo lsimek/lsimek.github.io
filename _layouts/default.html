@@ -16,11 +16,11 @@
 <header>
 	<nav>
 		<ul>
-			{% for page in site.pages %}
-				{% if page.url == page.url %}
+			{% for p in site.pages %}
+				{% if p.url == page.url %}
 					<li>{{ page.name_navbar }}</li>
 				{% else %}
-					<li><a href="{{ page.url }}">{{ page.name_title }}</a></li>
+					<li><a href="{{ page.url }}">{{ page.name_navbar }}</a></li>
 				{% endif %}
 			{% endfor %}
 		</ul>
