@@ -1,0 +1,100 @@
+:root {
+    --width-content: 900px;
+}
+
+body {
+	background-color: var(--color-alt);
+	margin: 0;
+}
+
+main {
+	background-color: var(--color-bg);
+	font-family: var(--font-text);
+}
+
+h1 {
+	font-family: var(--font-highlight);
+	color: var(--color-highlight);
+	margin-bottom: 70px;
+	text-align: center;
+}
+
+a {
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--color-highlight);
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.2rem;
+    color: var(--color-hover);
+}
+
+nav a {
+	font-family: var(--font-navbar);
+    color: var(--color-highlight);
+}
+
+header {
+	background-color: var(--color-bg);
+}
+
+nav {
+	font-family: var(--font-navbar);
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+#my-photo {
+    max-width: 200px;
+    margin: 20px auto; 
+	float: left;
+}
+
+#my-photo img {
+    height: 200px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10%;
+}
+
+@media screen and (min-width: 480px) {
+	#my-photo {
+		float: left;
+		margin-right: 40px;
+		margin-bottom: 0 auto;
+	}
+}
+
+.email{
+	font-family: var(--font-highlight);
+	color: var(--color-highlight);
+	font-size: 30px;
+	padding: 0px, 0px, 40px, 0px;
+	text-align: center;
+}
+
+.theme-toggle {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	color: var(--color-highlight);
+	font-family: var(--font-navbar);
+	font-size: 12px;
+}
+
+::selection {
+  color: var(--color-bg);
+  background-color: var(--color-hover);
+}
+
+::-moz-selection {
+  color: var(--color-bg);
+  background-color: var(--color-hover);
+}
+
+sup {
+    all: revert;
+}

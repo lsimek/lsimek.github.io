@@ -1,0 +1,10 @@
+:root {
+    --color-bg: #fff;
+    --color-alt: #fff;
+    --color-text: #000;
+    --color-highlight: #21b2aa;
+    --color-hover: #1c9791;
+    --font-navbar: Cantarell, sans-serif;
+    --font-highlight: Cantarell, sans-serif;
+    --font-text: Cantarell, sans-serif;
+}

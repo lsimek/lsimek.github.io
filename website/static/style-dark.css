@@ -1,0 +1,11 @@
+:root {
+    --color-bg: #222;
+    --color-alt: #222;
+    --color-text: #fff;
+    --color-highlight: #e0c6ff;
+    --color-hover: #e7d3ff;
+    --font-navbar: Cantarell, sans-serif;
+    --font-highlight: Cantarell, sans-serif;
+    --font-text: Cantarell, sans-serif;
+/*    --font-text: 'PT Mono', monospace; */
+}
