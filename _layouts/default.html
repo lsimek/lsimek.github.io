@@ -16,7 +16,8 @@
 <header>
 	<nav>
 		<ul>
-			{% for p in site.pages %}
+			{% assign sorted_pages = site.pages | sort: 'weight' %}
+			{% for p in sorted_pages %}
 				{% if p.url == page.url and page.name_title != "Home"%}
 					<li>{{ p.name_navbar }}</li>
 				{% else %}
