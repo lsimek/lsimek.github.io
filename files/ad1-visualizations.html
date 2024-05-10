@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>visualizations</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>ad1-visualizations</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -53,25 +53,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .s1 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Single */
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
-  </style>
-<style type="text/css">
-    
-
-<script>
-    MathJax.Hub.Config({
-        "HTML-CSS": {
-            /*preferredFont: "TeX",*/
-            /*availableFonts: ["TeX", "STIX"],*/
-            styles: {
-                scale: 100,
-                ".MathJax_Display": {
-                    "font-size": "100%",
-                }
-            }
-        }
-    });
-</script>
-    
   </style>
 <style type="text/css">
 /*-----------------------------------------------------------------------------
@@ -7514,7 +7495,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <center><font size="6">What is Advertised on Google in Croatia – a Visualization</font></center>
-<center><font size="5">tinjano.github.io</font></center>
+<center><font size="5">lsimek.github.io</font></center>
 </div>
 </div>
 </div>
@@ -7525,7 +7506,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>This notebook is part of the repository at <a href="https://github.com/tinjano/ad1">https://github.com/tinjano/ad1</a>.</p>
+<p>This notebook is part of the repository at <a href="https://github.com/lsimek/ad1">https://github.com/lsimek/ad1</a>.</p>
 </div>
 </div>
 </div>
@@ -7537,7 +7518,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">¶</a></h1><p>This notebook deals with data about advertisements shown by Google, with data collected from the new <a href="https://adstransparency.google.com/">Google Ads Transparency Center</a>. There is multifold motivation for this project, but one is most prominent – transparency. With ever greater saturation of the digital space with advertising, it only makes sense to hold advertisers and others who profit accountable in cases where their activities may be considered dubious, shady, illegal or otherwise harmful. While most advertising contains some form of skewing of the truth in an effort to influence potential customers, in recent times there has been particular outcry over a digital ecosystem ever more populated with, to put it facetiously but simply, the kind of advertisements previously seen only on pornographic websites. Through systematic analysis of collected data about advertisements, we can in theory investigate both patterns and specific actors, thereby separating facts from talking points and painting a clear picture both for individuals and institutions.</p>
-<p>Unfortunately, the data offered by Google's transparency center is quite lackluster. A number of parameters one would expect to see are not shown, e.g. money spent on the advertisement, audience response rates, specific criteria used for targeting (as opposed to only which categories either were or were not used) or keywords used. To expand on the latter, while an ad's contents can be seen on a given location given by an URL, it is not in any way given in the table. While the topic column is displayed, it is quite broad, with harmful content like ads promoting gambling (note later that the 6th most prominent advertiser is a gambling company) being euphemistically classified as 'hobbies, games &amp; leisure'. Interestingly, data about the number of times that an ad was shown is available only in the EEA area with Turkey, as this is the legal requirement in exactly those areas. It is very clear that Google is doing the bare minimum not to face legal challenges, while using this bare minimum to make claims about its supposed commitments to transparency and safety. The other table, involving removed advertisements, is even more lackluster. In it, the advertiser is not shown and the contents of the advertisement cannot be seen anywhere. While the existing information can still find a use in investigating trends and patterns, very little effort towards transparency is truly made.</p>
+<p>Unfortunately, the data offered by Google's transparency center is quite lackluster. A number of parameters one would expect to see are not shown, e.g. money spent on the advertisement, audience response rates, specific criteria used for targeting (as opposed to only which categories either were or were not used) or keywords used. To expand on the latter, while an ad's contents can be seen on a given location given by an URL, it is not in any way given in the table. While the topic column is displayed, it is quite broad, with harmful content like ads promoting gambling being euphemistically classified as 'hobbies, games &amp; leisure'. Interestingly, data about the number of times that an ad was shown is available only in the EEA area with Turkey, as this is the legal requirement in exactly those areas. The other table, involving removed advertisements, is even more lackluster. In it, the advertiser is not shown and the contents of the advertisement cannot be seen anywhere.</p>
 <p>For exactly how the data was gathered, see the <code>collecting-data.ipynb</code> notebook. You can also download the dataset for yourself on <a href="https://www.kaggle.com/datasets/lukasimek/google-ads-croatia">Kaggle</a>. This notebook will focus mainly on visualizations. All plots can be found within the <code>plots/</code> folder.</p>
 </div>
 </div>
